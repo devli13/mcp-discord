@@ -1,6 +1,6 @@
 {
   "name": "@devli13/mcp-discord",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server for Discord. Send messages, moderate, manage channels, inspect servers — from Claude Code, Paperclip agents, or any MCP client.",
   "type": "module",
   "main": "server.js",
