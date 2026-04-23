@@ -202,6 +202,14 @@ npm start          # boot server over stdio (needs DISCORD_BOT_TOKEN)
 
 ---
 
+## Companion project — inbound events
+
+This MCP handles outbound REST calls (send, delete, moderate). It does *not* hold a Discord Gateway WebSocket, so it can't react to inbound events (a user @mentioning the bot, DMs, new members joining).
+
+For inbound Discord events in a Paperclip setup, use [`@devli13/paperclip-plugin-discord`](https://github.com/devli13/paperclip-plugin-discord) — a fork of [@mvanhorn/paperclip-plugin-discord](https://github.com/mvanhorn/paperclip-plugin-discord) with free-form @mention routing, DM support, a serialized per-context message queue, and downtime mention backfill.
+
+The two projects are designed to work together: the plugin receives events, invokes your agent; the agent uses this MCP to respond and moderate. Use either or both depending on your setup.
+
 ## Attribution
 
 See [ATTRIBUTION.md](./ATTRIBUTION.md). Short version: built alongside the fork of [paperclip-plugin-discord](https://github.com/mvanhorn/paperclip-plugin-discord) by [@mvanhorn](https://github.com/mvanhorn), whose Gateway handling inspired design patterns here.
