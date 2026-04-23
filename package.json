@@ -1,0 +1,52 @@
+{
+  "name": "@devli13/mcp-discord",
+  "version": "0.1.0",
+  "description": "MCP server for Discord. Send messages, moderate, manage channels, inspect servers — from Claude Code, Paperclip agents, or any MCP client.",
+  "type": "module",
+  "main": "server.js",
+  "bin": {
+    "mcp-discord": "server.js"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/smoke.test.js",
+    "lint": "node --check server.js && node --check lib/discord.js && node --check lib/tools-messages.js && node --check lib/tools-reactions.js && node --check lib/tools-channels.js && node --check lib/tools-moderation.js && node --check lib/tools-guild.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "discord",
+    "discord-bot",
+    "community",
+    "moderation",
+    "claude",
+    "gemini",
+    "ai-agents"
+  ],
+  "author": "devli13",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devli13/mcp-discord.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devli13/mcp-discord/issues"
+  },
+  "homepage": "https://github.com/devli13/mcp-discord#readme",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "~1.29.0"
+  },
+  "files": [
+    "server.js",
+    "lib/",
+    "README.md",
+    "LICENSE",
+    "ATTRIBUTION.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
